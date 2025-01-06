@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='sticky top-0 '>
+    <div className='sticky top-0 z-50'>
       <nav className="bg-gray-300 shadow-sm ">
         {/* Desktop View */}
         <div className="hidden md:flex max-w-screen justify-between items-center h-16 px-8">
