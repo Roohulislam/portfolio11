@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from "../assets/photo.avif";
 import { LuMenu } from "react-icons/lu";
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -29,11 +30,11 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div className='flex justify-center items-center gap-3 md:gap-1'>
             <ul className="flex lg:gap-16 font-serif text-gray-600 md:gap-3 font-semibold pt-4">
-              <li className="hover:cursor-pointer hover:text-gray-800">Home</li>
-              <li className="hover:cursor-pointer hover:text-gray-800">About Me</li>
-              <li className="hover:cursor-pointer hover:text-gray-800">Skills</li>
-              <li className="hover:cursor-pointer hover:text-gray-800">Projects</li>
-              <li className="hover:cursor-pointer hover:text-gray-800">Work</li>
+              <li className="hover:cursor-pointer hover:text-gray-800"> <Link to="">Home </Link> </li>
+              <li className="hover:cursor-pointer hover:text-gray-800"><Link to="/about">About Me </Link> </li>
+              <li className="hover:cursor-pointer hover:text-gray-800"><Link to="/skills">Skills</Link> </li>
+              <li className="hover:cursor-pointer hover:text-gray-800"><Link to="/projects">Projects</Link> </li>
+              <li className="hover:cursor-pointer hover:text-gray-800"><Link to="/work">Work</Link> </li>
             </ul>
             <button className="px-2 py-2 mt-2 ml-3 md:text-sm bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition">
               Download CV
@@ -60,11 +61,11 @@ const Navbar = () => {
         </div>
         {showMenu && (
           <ul className="flex flex-col items-center justify-center bg-gray-200 font-serif">
-            <li className="hover:cursor-pointer hover:text-gray-800">Home</li>
-            <li className="hover:cursor-pointer hover:text-gray-800">About Me</li>
-            <li className="hover:cursor-pointer hover:text-gray-800">Work</li>
-            <li className="hover:cursor-pointer hover:text-gray-800">Projects</li>
-            <li className="hover:cursor-pointer hover:text-gray-800">Skills</li>
+            <li className="hover:cursor-pointer hover:text-gray-800"> <Link to="">Home </Link> </li>
+              <li className="hover:cursor-pointer hover:text-gray-800"><Link to="/about">About Me </Link> </li>
+              <li className="hover:cursor-pointer hover:text-gray-800"><Link to="/skills">Skills</Link> </li>
+              <li className="hover:cursor-pointer hover:text-gray-800"><Link to="/projects">Projects</Link> </li>
+              <li className="hover:cursor-pointer hover:text-gray-800"><Link to="/work">Work</Link> </li>
           </ul>
         )}
       </nav>
