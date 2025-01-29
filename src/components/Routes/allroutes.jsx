@@ -3,7 +3,7 @@ import AboutMe from '../AboutMe';
 import Skills from '../Skills';
 import Projects from '../Projects';
 import Work from '../Work';
-import Home from "../../pages/home";
+import Home from "../../pages/Home";
 
 
  

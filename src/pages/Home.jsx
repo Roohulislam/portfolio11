@@ -1,4 +1,4 @@
-import React from 'react'
+
 import AboutMe from '../components/AboutMe'
 import Banner from '../components/Banner'
 import Skills from '../components/Skills'
@@ -15,7 +15,6 @@ const Home = () => {
        <Projects/>
        <Work/>
        <Education/>
-
     </div>
   )
 }
