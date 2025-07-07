@@ -1,87 +1,98 @@
 import React from "react";
-import im1 from "../assets/wandrlust.png";
-import im2 from "../assets/weather.png";
-import im3 from "../assets/simongame.png";
-import im4 from "../assets/todo.png";
-import im5 from "../assets/abunaveed.png";
-import im6 from "../assets/taskecom.png";
+import im1 from "../assets/projects/abu 2.png";
+import im2 from "../assets/projects/faiz 1.png";
+import im3 from "../assets/projects/zee 1.png";
+import im4 from "../assets/projects/eccom 1.png";
+import im5 from "../assets/projects/simongame.png";
+import im6 from "../assets/projects/weather.png";
 
 const projects = [
   {
-    title: "E-commerce Airbnb clone",
+    title: "Abunaveed oil Agency Ecomm",
     img: im1,
-    description:
-      "A fully responsive e-commerce platform with a modern UI and payment gateway integration.",
-    liveDemo: "https://example-ecommerce.com",
+    liveDemo: "https://abunaveedoilagencychilas.com/",
+    github: "https://github.com/Roohulislam/ourproject"
   },
   {
-    title: "Weather Website",
+    title: "S/M Faiz construction",
     img: im2,
-    description: "A simple weather app using the html css and javascript and material ui",
-    liveDemo: "https://example-portfolio.com",
+    liveDemo: "https://construction-lake.vercel.app/",
+    github: "https://github.com/Roohulislam/construction-"
+  },
+  {
+    title: "Zeejan.tech software company",
+    img: im3,
+    liveDemo: "https://zeejan.tech/",
+    github: "https://github.com/Roohulislam/zeejan.tech"
+  },
+  {
+    title: "Demo Ecommerce website",
+    img: im4,
+    liveDemo: "https://ecommerce-ivory-mu.vercel.app/",
+    github: "https://github.com/Roohulislam/Ecommerce"
   },
   {
     title: "Simon Game",
-    img: im3,
-    description:
-      "A Simon Game is a memory-based game where players repeat a sequence of colors and sounds that progressively gets longer.",
-    liveDemo: "https://example-taskapp.com",
-  },
-  {
-    title: "Todo App",
-    img: im4,
-    description:
-      "A To-Do App for efficiently managing tasks with features like adding, editing, and deleting items.",
-    liveDemo: "https://example-taskapp.com",
-  },
-  {
-    title: "Abunaveed oil's & lubricants",
     img: im5,
-    description:
-      "Abunaveed and brothers oils and lubricants web is full responsive",
     liveDemo: "https://example-taskapp.com",
+    github: "https://github.com/yourusername/abunaveed-lubricants"
   },
   {
-    title: "E-commerce Shopsy",
+    title: "Weather App",
     img: im6,
-    description:
-      "shopsy is full responsive and complete functionality to search some product etc.",
     liveDemo: "https://ecommerce-ivory-mu.vercel.app",
+    github: "https://github.com/yourusername/ecommerce-shopsy"
   },
-  
 ];
 
 const Projects = () => {
   return (
-    <div className="p-8 bg-gray-200 mx-7 mt-3 rounded-2xl shadow-lg">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-       My Projects
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-100">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">
+          My Projects
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Here are some of my recent projects showcasing my skills and experience
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="p-6 bg-gray-100 rounded-lg relative shadow-lg hover:shadow-xl transition duration-300 border border-gray-200"
+            className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col"
           >
-            <h3 className="text-xl font-bold text-gray-700 mb-2">
-              {project.title}
-            </h3>
-            <img
-              src={project.img}
-              alt={project.title}
-              className="w-full h-40 object-cover rounded-lg mb-4"
-            />
-            <p className="text-gray-600 mb-6">{project.description}</p>
-            <div className="flex gap-4 bottom-1 absolute left-[32%]">
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-500  text-white rounded-lg hover:bg-blue-600 transition"
-              >
-                Live Demo
-              </a>
+            <div className="h-48 sm:h-56 overflow-hidden">
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 flex flex-col">
+              <h3 className="text-xl font-bold text-gray-800 mb-4">
+                {project.title}
+              </h3>
               
+              <div className="flex gap-3 mt-auto">
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                >
+                  Live Demo
+                </a>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         ))}

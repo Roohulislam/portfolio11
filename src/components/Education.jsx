@@ -3,30 +3,45 @@ import React from "react";
 const educationData = [
   {
     year: "2021 - 2025",
-    degree: "Bachelor’s of Computer Science",
+    degree: "Bachelor's in Computer Science",
+    details: "Specialized in Software Engineering and Web Development"
   },
   {
     year: "2017 - 2018",
     degree: "FSC Pre-Engineering",
+    details: "Major subjects: Mathematics, Physics, Chemistry"
   },
 ];
 
 const Education = () => {
   return (
-    <div className="p-8  rounded-2xl shadow-lg ">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6 font-serif">
-        Education
-      </h2>
-      <div className=" gap-5 grid  grid-cols-2 ">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-100">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3 font-serif">
+          Education
+        </h2>
+        <p className="text-lg text-gray-600">
+          My academic background and qualifications
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {educationData.map((edu, index) => (
           <div
             key={index}
-            className="p-4 bg-gray-200 rounded-lg shadow-md border border-gray-200 hover:shadow-lg"
+            className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 flex flex-col"
           >
-            <h3 className="text-xl font-semibold text-gray-700">
-              {edu.degree}
-            </h3>
-            <span className="text-blue-500 font-medium">{edu.year}</span>
+            <div className="flex-grow">
+              <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">
+                {edu.year}
+              </span>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">
+                {edu.degree}
+              </h3>
+              <p className="text-gray-500">
+                {edu.details}
+              </p>
+            </div>
           </div>
         ))}
       </div>

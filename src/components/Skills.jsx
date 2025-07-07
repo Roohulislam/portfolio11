@@ -17,67 +17,72 @@ import img15 from "../assets/postman.png";
 import img16 from "../assets/node.png";
 
 const Skills = () => {
-  return (
-    <div className="bg-gray-200 rounded-lg shadow-xl mb-2 max-w-screen-xl mx-auto p-2 font-serif ">
-      <h1 className="text-3xl font-semibold text-gray-800 font-serif text-center mb-4">
-        Skills
-      </h1>
-      <p className="text-center text-gray-800 mb-6  font-serif">
-        The skills, tools, and technologies I am really good at
-      </p>
-      
-      {/* Flex container with responsiveness */}
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 shadow-xl gap-6">
-        <div className="flex justify-center items-center mx-4">
-          <img src={img1} className="w-32 h-32  object-contain hover:scale-110 transition duration-200 rounded-xl" alt="HTML" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img2} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="CSS" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img3} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="JavaScript" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img4} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Bootstrap" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img5} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Material UI" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img6} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img7} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img8} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img9} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img10} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img11} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img12} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img13} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img14} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img15} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
-        <div className="flex justify-center items-center">
-          <img src={img16} className="w-32 h-32 object-contain hover:scale-110 transition duration-200 rounded-xl" alt="Tailwind" />
-        </div>
+  // Group skills by category
+  const skillCategories = {
+    "Frontend Technologies": [
+      { img: img1, name: "HTML" },
+      { img: img2, name: "CSS" },
+      { img: img3, name: "JavaScript" },
+      { img: img4, name: "Bootstrap" },
+      { img: img5, name: "Material UI" },
+      { img: img6, name: "Tailwind CSS" },
+      { img: img7, name: "React" },
+      { img: img14, name: "Redux" }
+    ],
+    "Backend & Database": [
+      { img: img8, name: "MongoDB" },
+      { img: img9, name: "Express" },
+      { img: img10, name: "Node.js" },
+      { img: img11, name: "SQL" }
+    ],
+    "Development Tools": [
+      { img: img12, name: "Git" },
+      { img: img13, name: "GitHub" },
+      { img: img15, name: "Postman" }
+    ]
+  };
 
+ return (
+    <div className="bg-gray-100 rounded-xl shadow-md max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <div className="text-center mb-10">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
+          My Skills & Technologies
+        </h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
+          Specializing in frontend development with React and modern web technologies
+        </p>
+        <p className="text-gray-700 max-w-3xl mx-auto text-sm sm:text-base">
+          As a <span className="font-semibold">frontend-focused developer</span>, I primarily work with React.js and modern JavaScript ecosystems to build responsive, interactive user interfaces. While my expertise lies in crafting pixel-perfect UIs with tools like Tailwind CSS and Material-UI, I also have working experience with backend integration, including API consumption, basic Node.js server setup, and database interactions. This full-stack exposure enables me to collaborate effectively with backend teams and understand the complete application architecture.
+        </p>
       </div>
+
+      {/* Skills by Category - keep the existing code */}
+      {Object.entries(skillCategories).map(([category, skills]) => (
+        <div key={category} className="mb-10 last:mb-0">
+          <h2 className="text-xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+            {category}
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {skills.map((skill, index) => (
+              <div 
+                key={index}
+                className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col items-center"
+              >
+                <div className="w-16 h-16 mb-2 flex items-center justify-center">
+                  <img 
+                    src={skill.img} 
+                    alt={skill.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <span className="text-sm font-medium text-gray-700">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

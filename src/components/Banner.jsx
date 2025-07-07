@@ -5,43 +5,82 @@ import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareWhatsapp } from "react-icons/fa6";
+
 const Banner = () => {
   return (
-    <div className=' bg-gray-200 rounded border shadow-2xl max-w-screen mt-1 md:flex md:flex-row-reverse md:justify-between' >
-      <div className='w-full  md:flex md:justify-end flex justify-center  items-center m-1'>
-        <img src={BannImg} className='w-60 rounded hover:scale-105 transition duration-300 shadow-gray-700 sm:w-52
-        shadow-2xl mx-9' alt="jan image" />
-      </div>
-         <div className='h-full w-full m-3 pt-8'>
-        <h1 className='font-bold text-2xl md:text-xl mx-3 sm:text-xl text-gray-800 font-serif cursor-pointer hover:text-blue-600'>Hi i'm Rooh-ul-islam</h1>
-        <p className='font-sm font-serif mx-3 my-1 text-gray-800'> Experienced MERN Stack Developer with 1+ years of expertise in MongoDB, Express.js, Node.js, and React.js. Skilled in building full-stack web applications and creating efficient APIs. Strong problem solver with a passion for learning new technologies. 
-            Adept at both front-end and backend development. Collaborative team player dedicated to project success</p>
-             <div className='flex  mx-3 pt-4'>
-                <IoLocationOutline className='flex mx-2'/>
-                <h2 className=' font-serif text-sm text-gray-800 pb-1  hover:text-blue-600 cursor-pointer'>Abottabad, Pakistan</h2>
-                </div>
-                <div>
-                <li className=' mx-6 font-serif text-sm text-gray-800 pb-6 hover:text-blue-600 cursor-pointer'>available for new projects</li>
-                 <div className='flex justify-center  gap-7'>
-                 <a href=" https://github.com/Roohulislam">
-                    <FaGithub size={24} className='hover:scale-100 hover:text-blue-600'/>
-                 </a>
-                 <a href="https://www.linkedin.com/in/rooh-ul-islam-60a251300/">
-                    <FaLinkedin size={24} className='hover:scale-100 hover:text-blue-600'/>
-                 </a>
-                 <a href="https://mail.google.com/mail/u/0/#inbox">
-                    <MdEmail size={24} className='hover:scale-100 hover:text-blue-600'/>
-                 </a>
-                 <a href="tel:+923488560875">
-                    <FaSquareWhatsapp size={24} className='hover:scale-100 hover:text-blue-600'/>
-                 </a>
-
-                 </div>
-             </div>
+    <div className='bg-gray-200 rounded-lg border shadow-xl max-w-7xl mx-auto mt-2 md:mt-4 p-4 md:p-6 lg:flex lg:flex-row-reverse lg:items-center lg:justify-between'>
+      {/* Image Section */}
+      <div className='w-full flex justify-center lg:justify-end lg:w-auto mb-6 lg:mb-0'>
+        <img 
+          src={BannImg} 
+          className='w-48 sm:w-56 md:w-64 rounded-full hover:scale-105 transition duration-300 shadow-lg border-4 border-white' 
+          alt="Profile" 
+        />
       </div>
       
+      {/* Content Section */}
+      <div className='lg:w-2/3 xl:w-3/4'>
+        <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl text-gray-800 font-serif hover:text-blue-600 transition-colors duration-200 mb-2'>
+          Hi, I'm Rooh-ul-Islam
+        </h1>
+        
+        <p className='text-sm sm:text-base md:text-lg text-gray-700 font-serif mb-4 leading-relaxed'>
+       As a Frontend Developer with expertise in building responsive, user-centric web applications using React.js, JavaScript (ES6+), and modern CSS frameworks. Skilled in crafting pixel-perfect UIs with HTML5, CSS3, Bootstrap, Material-UI, and Tailwind CSS. Passionate about creating efficient, scalable frontend architectures with seamless API integrations. Strong advocate for clean code, performance optimization, and intuitive user experiences.
+        </p>
+        
+        <div className='flex items-center mb-4'>
+          <IoLocationOutline className='text-gray-600 mr-2' />
+          <span className='font-serif text-sm sm:text-base text-gray-700 hover:text-blue-600 transition-colors duration-200'>
+            Abbottabad, Pakistan
+          </span>
+        </div>
+        
+        <div className='flex items-center mb-6'>
+          <span className='font-serif text-sm sm:text-base text-gray-700 italic'>
+            Available for new projects
+          </span>
+        </div>
+        
+        {/* Social Icons */}
+        <div className='flex justify-center md:justify-start gap-6 sm:gap-8'>
+          <a 
+            href="https://github.com/Roohulislam" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className='text-gray-700 hover:text-blue-600 transition-colors duration-200'
+            aria-label="GitHub"
+          >
+            <FaGithub size={26} className='hover:scale-110 transition-transform duration-200'/>
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/rooh-ul-islam-60a251300/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className='text-gray-700 hover:text-blue-600 transition-colors duration-200'
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={26} className='hover:scale-110 transition-transform duration-200'/>
+          </a>
+          <a 
+            href="mailto:your-email@example.com" 
+            className='text-gray-700 hover:text-blue-600 transition-colors duration-200'
+            aria-label="Email"
+          >
+            <MdEmail size={26} className='hover:scale-110 transition-transform duration-200'/>
+          </a>
+          <a 
+            href="https://wa.me/923488560875" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className='text-gray-700 hover:text-blue-600 transition-colors duration-200'
+            aria-label="WhatsApp"
+          >
+            <FaSquareWhatsapp size={26} className='hover:scale-110 transition-transform duration-200'/>
+          </a>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
