@@ -21,7 +21,7 @@ const Education = () => {
           Education
         </h2>
         <p className="text-lg text-gray-600">
-          My academic background and qualifications
+          My Academic background and qualifications
         </p>
       </div>
 
