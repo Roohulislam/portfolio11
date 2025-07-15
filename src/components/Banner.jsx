@@ -1,5 +1,5 @@
 import React from 'react';
-import BannImg from "../assets/a.png";
+import BannImg from "../assets/projects/personal image.jpg";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -13,7 +13,7 @@ const Banner = () => {
       <div className='w-full flex justify-center lg:justify-end lg:w-auto mb-6 lg:mb-0'>
         <img 
           src={BannImg} 
-          className='w-48 sm:w-56 md:w-64 rounded-full hover:scale-105 transition duration-300 shadow-lg border-4 border-white' 
+          className='w-48 sm:w-56 md:w-64 rounded-full hover:scale-105 transition duration-300 shadow-lg border-4 border-blue-100' 
           alt="Profile" 
         />
       </div>
