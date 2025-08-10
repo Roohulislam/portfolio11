@@ -2,41 +2,36 @@ import React from "react";
 
 const workExperience = [
   {
-    role: "Frontend Developer",
-    company: "Firnas.Tech",
-    duration: "November 2024 - Present",
+    role: "Web Developer",
+    company: "Firnas.tech",
+    location: "Abbottabad, Pakistan",
+    duration: "13/10/2024 – 04/08/2025",
     responsibilities: [
-      "Developed and maintained the front-end of web applications using React.js and Tailwind CSS",
-      "Collaborated with designers and backend developers to implement responsive UI/UX designs",
-      "Optimized components for maximum performance across various devices and browsers",
-      "Implemented state management solutions using Context API and Redux",
-      "Conducted code reviews and mentored junior developers"
+      "Led end-to-end development of a responsive client dashboard with React.js and Tailwind CSS, improving load time by 40% and boosting engagement by 25%",
+      "Integrated dynamic RESTful APIs into a real-time analytics platform for 10,000+ users, cutting data latency by 50%",
+      "Enhanced UI/UX, standardized components, and optimized performance, reducing development time by 35% and improving FCP from 3.2s to 1.5s"
     ],
   },
   {
-    role: "Intern Developer",
-    company: "internship at Firnas.Tech",
-    duration: "July 2024 - October 2024",
+    role: "Web Development Intern",
+    company: "Firnas.tech",
+    location: "Abbottabad, Pakistan",
+    duration: "10/07/2024 – 10/10/2024",
     responsibilities: [
-      "Assisted in building and debugging web applications using modern JavaScript frameworks",
-      "Learned and applied agile development processes in a team environment",
-      "Supported senior developers in both front-end and back-end development tasks",
-      "Participated in daily standups and sprint planning meetings",
-      "Contributed to documentation and knowledge sharing within the team"
+      "Developed and optimized React.js features, reducing UI bugs by 30% and enhancing cross-device user experience",
+      "Integrated RESTful APIs for real-time functionality",
+      "Collaborated in Agile teams and improved documentation to streamline onboarding and feature delivery"
     ],
   },
 ];
 
 const Work = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-1 py-12 bg-gray-100">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
+    <div className="max-w-7xl mx-auto px-2 sm:px-2 mb-2 lg:px-2 mt-1 py-2 bg-gray-100">
+      <div className="text-center mb-2">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-1">
           Work Experience
         </h2>
-        <p className="text-lg text-gray-600">
-          My professional journey and contributions
-        </p>
       </div>
 
       <div className="space-y-8">
@@ -46,12 +41,18 @@ const Work = () => {
             className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
           >
             <div className="p-6 sm:p-8">
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-4">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
-                  {job.role} <span className="text-blue-600">@ {job.company}</span>
+                  {job.company} – {job.location}
                 </h3>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row sm:justify-between mb-4">
+                <h4 className="text-lg sm:text-xl text-gray-700 font-medium">
+                  {job.role}
+                </h4>
                 <span className="text-gray-500 font-medium mt-1 sm:mt-0">
-                  {job.duration}
+                  [ {job.duration} ]
                 </span>
               </div>
               

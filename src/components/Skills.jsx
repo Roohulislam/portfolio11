@@ -43,8 +43,8 @@ const Skills = () => {
   };
 
  return (
-    <div className="bg-gray-100 rounded-xl shadow-md max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-      <div className="text-center mb-10">
+    <div className="bg-gray-100 mb-2 rounded-xl shadow-md max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <div className="text-center mb-2">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
           My Skills & Technologies
         </h1>
@@ -52,7 +52,7 @@ const Skills = () => {
           Specializing in frontend development with React and modern web technologies
         </p>
         <p className="text-gray-700 max-w-3xl mx-auto text-sm sm:text-base">
-          As a <span className="font-semibold">frontend-focused developer</span>, I primarily work with React.js and modern JavaScript ecosystems to build responsive, interactive user interfaces. While my expertise lies in crafting pixel-perfect UIs with tools like Tailwind CSS and Material-UI, I also have working experience with backend integration, including API consumption, basic Node.js server setup, and database interactions. This full-stack exposure enables me to collaborate effectively with backend teams and understand the complete application architecture.
+          Frontend-focused developer skilled in React.js, modern JavaScript, and UI design with Tailwind CSS and Material-UI, complemented by backend integration experience for full-stack collaboration
         </p>
       </div>
 
